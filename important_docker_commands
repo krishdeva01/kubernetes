@@ -1,0 +1,31 @@
+To work in the created docker container
+   -docker exec -it container_name bash
+ 
+To run a docker container
+   docker run -d -p 3000:3000 --name give_container_name nextApp(image_name)
+
+To attach a docker container with a local changes in the react app run this below command:
+
+On windows:
+-e setting the env variable in windows
+docker run -e 	CHOKIDAR_USEPOLLING=true -v %cd%\src:/app/src:ro -d -p 3000:3000 --name give_container_a_new_name image_name
+
+on linux/macos
+
+docker run -v $(pwd):/app/src -d -p 3000:3000 --name give_container_a_name image_name 
+
+-d = run docker container in detached mode
+-v = bine mount , to make changes to the docker container by changing it in the local folder
+:ro = to make it read only in the docker container, for make that the changes in the container will not reflect in the local
+
+
+
+# sudo docker run --name docker_swife -v $(pwd)/docker_swife:/ 230265051596.dkr.ecr.us-east-1.amazonaws.com/swife-apis
+# sudo docker cp docker_swife:/app $(pwd)/docker_swife
+
+# docker run --name docker_swife -it 230265051596.dkr.ecr.us-east-1.amazonaws.com/swife-apis:latest /bin/bash
+
+
+# docker cp docker_swife:/ /home/krishna/Desktop/Comcast/docker_swife
+
+# docker cp docker_swife:/ /home/krishna/Desktop/Comcast/docker_swife

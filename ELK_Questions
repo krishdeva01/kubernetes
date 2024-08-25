@@ -1,0 +1,15 @@
+#Aws and #DevOps #ELK Interview Question
+
+What is Index and shards?
+How to add node in cluster?
+What is mappings?
+What is document
+How to increase shards count in index after created?
+How to configure diaster recovery in #elaticsearch?
+What is shard replica?
+What is Grok pattern?
+Explain ILM ?
+What is Aliases ?
+Port number of #kibana , #elasticsearch and #logstash?
+How to deploy in #elasticsearch ?
+Explain the flow of #kibana , #elasticsearch and #logstash ?

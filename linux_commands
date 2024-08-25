@@ -1,0 +1,62 @@
+to check number of cpus  - cat /proc/cpuinfo | grep -i processor
+sed -i ':a;N;$!ba;s/\n\n/\n/g' linux_commands
+sed -i 's/word_to_remove//g' file.txt
+
+Here are some examples of the grep command options in use:
+Count matching lines:
+
+grep -c "pattern" file.txt
+This will print the number of lines that match "pattern" in file.txt.
+Suppress filename output:
+
+grep -h "pattern" *.txt
+This will display matching lines from multiple .txt files but won't display the filenames.
+Case-insensitive search:
+
+grep -i "pattern" file.txt
+This will search for "pattern" in file.txt, ignoring case.
+List filenames with matches:
+
+grep -l "pattern" *.txt
+This will list the filenames of .txt files containing the "pattern".
+Show line numbers with matches:
+
+grep -n "pattern" file.txt
+This will display matching lines along with their line numbers.
+Exclude matching lines:
+
+grep -v "pattern" file.txt
+This will print all lines that do not match "pattern".
+Specify multiple patterns:
+
+grep -e "pattern1" -e "pattern2" file.txt
+This will search for both "pattern1" and "pattern2" in file.txt.
+Search using patterns from a file:
+
+grep -f patterns.txt file.txt
+This will search for patterns listed in patterns.txt within file.txt.
+Extended regular expressions:
+
+grep -E "pattern1|pattern2" file.txt
+This allows you to use extended regex to match either "pattern1" or "pattern2".
+Match whole words:
+
+grep -w "word" file.txt
+This will match only the whole word "word" and not substrings.
+Print only matching parts:
+
+grep -o "pattern" file.txt
+This will print only the matched parts of each line, each on a separate line.
+Print lines after a match:
+
+grep -A 3 "pattern" file.txt
+This will display the matching line and the next 3 lines after the match.
+Print lines before a match:
+
+grep -B 3 "pattern" file.txt
+This will display the matching line and the 3 lines before the match.
+Print lines around a match:
+
+grep -C 3 "pattern" file.txt
+This will display the matching line along with 3 lines before and after the match.
+
